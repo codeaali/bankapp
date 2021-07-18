@@ -10,6 +10,7 @@ body{
     display: flex;
     flex-direction: row;
     padding: 0;
+    box-sizing: border-box;
     
 }
 .left-pane{
@@ -48,6 +49,10 @@ input[type="submit"]{
     color: rgb(255, 255, 255);
 
 }
+[type="submit"].lgn{
+    background-color: #0b648d;
+    border: 1px solid rgba(5, 59, 131, 0.685);
+}
 
 .result-container{
     padding: 10px 40px;
@@ -57,4 +62,5 @@ input[type="submit"]{
     height: auto;
     display: flex;
     justify-content: center;
+    /* display: none; */
 }

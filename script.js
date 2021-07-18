@@ -36,7 +36,11 @@
         document.querySelector("#resultarea").innerHTML = htmlData
     }
 
+    function displayFunc(){
+        document.getElementById("res-container").style.display="none"
+    }
     function listAllUsers() {
+        document.getElementById("res-container").style.display="block";
         let users = []
 
         for (let i = 0; i < localStorage.length; i++) {
@@ -78,7 +82,7 @@
         let user = sessionStorage.getItem("user")
         let data = JSON.parse(localStorage.getItem(user))
         // console.log(data);
-        ////alert(data.balance)
+        alert(data.balance)
 
     }
     function getUser(acn)
@@ -102,7 +106,7 @@
                 account.balance -= amt
                 localStorage.setItem(user,JSON.stringify(account))
                 let touser = getUser(toaccno)
-                touser.balance = amt+Number(touser.balance)
+                touser.balance = Number(amt)+Number(touser.balance)
                 localStorage.setItem(toaccno,JSON.stringify(touser))
                 alert("transaction done")
             }
